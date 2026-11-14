@@ -37,6 +37,28 @@ Abra um terminal
 
 Agora você deve abrir a classe principal de cada módulo e rode a Application, Use EurekaServerApplication, MsUsuariosApplication, MsTrocasApplication e ApiGatewayApplication, nesta ordem.
 
+Caso deseje, é possível realizar a execução de cada aplicação por meio do terminal:
+
+Eureka Server:
+
+        cd eureka-server
+        mvn spring-boot:run
+
+ms-usuarios:
+
+        cd ms-usuarios
+        mvn spring-boot:run
+
+ms-trocas:
+
+        cd ms-trocas
+        mvn spring-boot:run
+
+API Gateway:
+
+        cd api-gateway
+        mvn spring-boot:run
+
 Os bancos "usuarios" e "trocas" e as tabelas com dados iniciais são criados automaticamente pelo Flyway (usuário root, senha root).
 
 Para subir outra instância de um serviço, rode o mesmo comando em outro terminal (a porta é aleatória).
