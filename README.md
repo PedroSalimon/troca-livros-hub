@@ -2,8 +2,8 @@
 
 ## Integrantes
 
-- Nome: ______________________  RM: ________
-- Nome: ______________________  RM: ________
+- Nome: Pedro Salimon  RM: 555038
+- Nome: Lucas Moura Machado  RM: 557431
 
 ## Problema
 
@@ -11,7 +11,7 @@ Muitos livros ficam parados nas estantes enquanto outras pessoas procuram exatam
 
 ## Solução
 
-App de troca de livros (como o Quintal). O usuário se cadastra (nome, idade, endereço, e-mail, gêneros e autores favoritos) e cadastra seus livros (autor, título, gênero, editora e condição: NOVO, SEMINOVO, BOM, REGULAR ou DESGASTADO). O app lista os livros disponíveis na mesma cidade que combinam com seus favoritos, e o usuário pode propor uma troca.
+App de troca de livros. O usuário se cadastra (nome, idade, endereço, e-mail, gêneros e autores favoritos) e cadastra seus livros (autor, título, gênero, editora e condição: NOVO, SEMINOVO, BOM, REGULAR ou DESGASTADO). O app lista os livros disponíveis na mesma cidade que combinam com seus favoritos, e o usuário pode propor uma troca.
 
 Arquitetura (Java 25, Spring Boot 4.0.9, MySQL, Flyway):
 
@@ -28,32 +28,14 @@ Java 25, Maven e Docker instalados. Portas livres: 3306, 8761 e 8082.
 
 ## Como executar
 
-Abra um terminal para cada passo e siga a ordem.
+Abra um terminal 
 
-1. MySQL (aguarde uns 30 segundos até ficar pronto):
+1. MySQL (aguarde uns 30 segundos até ficar pronto): Abra um terminal e execute os códigos
 
         cd compose
         docker compose up -d
 
-2. Eureka Server:
-
-        cd eureka-server
-        mvn spring-boot:run
-
-3. ms-usuarios:
-
-        cd ms-usuarios
-        mvn spring-boot:run
-
-4. ms-trocas:
-
-        cd ms-trocas
-        mvn spring-boot:run
-
-5. API Gateway:
-
-        cd api-gateway
-        mvn spring-boot:run
+Agora você deve abrir a classe principal de cada módulo e rode a Application, Use EurekaServerApplication, MsUsuariosApplication, MsTrocasApplication e ApiGatewayApplication, nesta ordem.
 
 Os bancos "usuarios" e "trocas" e as tabelas com dados iniciais são criados automaticamente pelo Flyway (usuário root, senha root).
 
