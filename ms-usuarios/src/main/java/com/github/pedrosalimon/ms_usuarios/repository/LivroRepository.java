@@ -10,7 +10,6 @@ import java.util.List;
 
 public interface LivroRepository extends JpaRepository<Livro, Long> {
 
-    // Livros disponiveis de outros usuarios que moram na mesma cidade/estado
     @Query("SELECT l FROM Livro l JOIN FETCH l.usuario u "
             + "WHERE l.status = :status "
             + "AND u.id <> :usuarioId "

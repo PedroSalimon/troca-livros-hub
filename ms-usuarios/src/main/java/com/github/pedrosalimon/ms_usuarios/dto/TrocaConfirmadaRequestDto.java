@@ -5,9 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-/**
- * Contrato recebido do ms-trocas (via OpenFeign) quando uma troca é confirmada.
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

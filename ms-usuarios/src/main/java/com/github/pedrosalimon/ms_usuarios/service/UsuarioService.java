@@ -79,7 +79,6 @@ public class UsuarioService {
         usuarioRepository.deleteById(id);
     }
 
-    // Livros disponiveis, na mesma cidade, que combinam com os generos ou autores favoritos
     @Transactional(readOnly = true)
     public List<LivroResponseDto> findLivrosRecomendados(Long id){
 

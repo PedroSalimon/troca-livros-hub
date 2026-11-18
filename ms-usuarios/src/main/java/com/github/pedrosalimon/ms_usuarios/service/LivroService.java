@@ -69,8 +69,6 @@ public class LivroService {
         livroRepository.deleteById(id);
     }
 
-    // Chamado pelo ms-trocas (OpenFeign): altera o status dos dois livros para TROCADO
-    // e passa cada livro para o novo dono.
     @Transactional
     public void confirmarTroca(TrocaConfirmadaRequestDto requestDto){
 

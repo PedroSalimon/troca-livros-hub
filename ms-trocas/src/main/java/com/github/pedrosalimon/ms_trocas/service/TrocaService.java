@@ -85,8 +85,6 @@ public class TrocaService {
         trocaRepository.deleteById(id);
     }
 
-    // Comunicação síncrona com o ms-usuarios (OpenFeign + Eureka + LoadBalancer).
-    // O Circuit Breaker e o fallback ficam no controller.
     @Transactional
     public TrocaResponseDto confirmarTroca(Long id){
 
@@ -112,7 +110,6 @@ public class TrocaService {
         return new TrocaResponseDto(troca);
     }
 
-    // Usado pelo fallback do controller quando o ms-usuarios está indisponível
     @Transactional
     public TrocaResponseDto alterarStatusDaTroca(Long id){
 

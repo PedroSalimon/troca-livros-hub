@@ -4,9 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-/**
- * Contrato enviado ao ms-usuarios (via OpenFeign) para confirmar a troca dos livros.
- */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
